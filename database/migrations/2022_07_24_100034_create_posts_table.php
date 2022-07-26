@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
             $table->string('title', 100);    // obbligatorio
             $table->string('image', 100)->nullable();    //non è obbligatorio e quindi metto nullable()
             $table->text('content')->nullable();     //non è obbligatorio e quindi metto nullable()
-            $table->string('excerpt')->nullable();   //non è obbligatorio e quindi metto nullable()
+            $table->string('excerpt', 1500)->nullable();   //non è obbligatorio e quindi metto nullable()
             $table->timestamps();
         });
     }

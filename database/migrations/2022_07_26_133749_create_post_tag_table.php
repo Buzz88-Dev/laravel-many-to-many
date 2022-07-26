@@ -14,11 +14,12 @@ class CreatePostTagTable extends Migration
     public function up()
     {
         Schema::create('post_tag', function (Blueprint $table) {
-            // $table->id();
+            // $table->id('id);
             // $table->timestamps();
             // non ci servono ne id ne timestamps(); conterra solo i due id esterni
             $table->foreignId('post_id')->constrained();
 		    $table->foreignId('tag_id')->constrained();
+            // $table->primary(['post_id', 'tag_id']);
         });
     }
 
