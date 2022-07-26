@@ -26,7 +26,7 @@ class AddForeignKeyCategoryToPosts extends Migration
     public function down()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->dropForeign(['category_id']);  // con questa sintassi annulliamo questa istruzione ma la colonna rimane
+            $table->dropForeign(['category_id']);  // con questa sintassi annulliamo questa istruzione ma la colonna rimane; togliamo la chiave esterna e poi la colonna
             $table->dropColumn(['category_id']);   // con questa sintassi eliminiamo la colonna
         });
     }

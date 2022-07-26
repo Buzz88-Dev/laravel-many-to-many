@@ -9,4 +9,8 @@ class Category extends Model
 {
     use Slugger;
     public $timestamps = false;
+
+    public function post() {
+        return $this->hasMany('App\Models\Post');
+    }
 }
