@@ -1,5 +1,6 @@
 @extends('admin.layouts.base')
 @section('mainContent')
+    <h1>Users</h1>
     <table class="table table-striped">
         <thead>
             <tr>
