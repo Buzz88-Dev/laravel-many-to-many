@@ -40,4 +40,8 @@ class User extends Authenticatable
     public function userDetails(){
         return $this->hasOne('App\Models\UserDetails'); // nella tabella che non ha la foreign Key;
     }
+
+    public function posts() {
+        return $this->hasMany('App\Models\Post');  // uno a molti; has() nella tabella che non ha la foreign key
+    }
 }

@@ -15,7 +15,7 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('slug', 100);     // obbligatorio
+            $table->string('slug', 100)->unique();     // obbligatorio
             $table->string('title', 100);    // obbligatorio
             $table->string('image', 100)->nullable();    //non è obbligatorio e quindi metto nullable()
             $table->text('content')->nullable();     //non è obbligatorio e quindi metto nullable()

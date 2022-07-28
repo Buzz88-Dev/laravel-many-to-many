@@ -73,6 +73,15 @@
                 </div>
             @endforeach
 
+            {{-- @foreach ($errors->get('tags.*') as $messages) --}}
+                {{-- @dd($message) --}}
+                {{-- @foreach ($messages as $message)
+                    <div class="invalid-feedback d-block">
+                        {{ $message }}
+                    </div>
+                @endforeach
+            @endforeach --}}
+
             @error('tags')
                 <div class="invalid-feedback">
                     {{ $message }}

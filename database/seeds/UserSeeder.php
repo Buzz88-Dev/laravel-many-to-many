@@ -15,9 +15,9 @@ class UserSeeder extends Seeder
     {
         $users = [
             [
-                'name' => 'asdf',
-                'email' => 'asdf@asdf.asdf',
-                'password' => Hash::make('asdf'), // metodo per creare le password
+                'name' => 'omar',
+                'email' => 'omar@gmail.com',
+                'password' => Hash::make('omar1988'), // metodo per creare le password
             ],
 
             [

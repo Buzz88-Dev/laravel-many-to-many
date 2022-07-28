@@ -7,6 +7,8 @@
                 <th>id</th>
                 <th>Slug</th>
                 <th>Title</th>
+                {{-- <th>Birth</th> --}}
+                <th class="actions">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -15,13 +17,14 @@
                     <td>{{ $post->id}} </td>
                     <td>{{ $post->slug}} </td>
                     <td>{{ $post->title}} </td>
-                    <td>
+                    {{-- <td>{{ $post->user}} </td>   decommentare e analizzare  --}}
+                    {{-- <td>{{ $post->user->userDetails->birth}} </td> --}}
+                    {{-- creare il seeder di UserDetailsSeeder e stampare qui qualche dato --}}
+                    <td class="actions">
                         <a href="{{ route('admin.posts.show', ['post' => $post])}}" class="btn btn-primary">View</a>
-                    </td>
-                    <td>
+
                         <a href="{{ route('admin.posts.edit', ['post' => $post])}}" class="btn btn-warning">Edit</a>
-                    </td>
-                    <td>
+
                         <button type="submit" class="btn btn-danger js-delete">Delete</button>
                     </td>
                 </tr>
