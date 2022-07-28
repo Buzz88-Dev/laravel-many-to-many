@@ -116,6 +116,8 @@ class PostController extends Controller
 
     public function destroy(Post $post)
     {
+        $post->tags()->detach();  // da inserire quando c e una relazione molti a molti; errore perche c e una tabella ponte; detach() toglie tutto
+        // $post->tags()->sync([]);
         $post->delete();
         return redirect()->route('admin.posts.index');
     }
